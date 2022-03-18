@@ -1,0 +1,10 @@
+.top {
+  background-color: hsl(225, 100%, 98%);
+  height: 230px;
+  border-radius: 0 0 30px 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}

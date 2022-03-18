@@ -1,0 +1,62 @@
+.row {
+  display: flex;
+  margin: 1.5rem 5% 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.flex {
+  display: flex;
+  margin-top: 20px;
+}
+.box1 {
+  background-color: hsl(227, 47%, 96%);
+  width: calc(24% - 10px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  border-radius: 8px;
+  padding: 20px 0;
+  box-shadow: 0 0 3px 0px rgb(241, 241, 241);
+}
+.icon {
+  margin-right: 10px;
+}
+.iconvote {
+  margin-right: 5px;
+  height: 5px;
+  margin-top: 8px;
+}
+.name {
+  color: hsl(228, 12%, 44%);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.count {
+  color: hsl(230, 17%, 14%);
+  margin: 20px 0 0;
+  font-size: 3rem;
+}
+.type {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: hsl(228, 12%, 44%);
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.down {
+  color: hsl(356, 69%, 56%);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.up {
+  color: hsl(163, 72%, 41%);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.box1:hover {
+  background-color: hsl(227, 47%, 94%);
+}
+
+@media screen and (max-width: 769px) {
+}
