@@ -1,20 +1,25 @@
 import React from "react";
+import { useState } from "react";
 import TopBg from "./components/UI/background";
 import Header from "./components/Content/header";
 import SocialContents from "./components/Content/upperContent";
 import Head from "./components/Content/overviewhead";
 import Overview from "./components/Content/overview";
-import "./App.css";
 
 function App() {
+  const [theme, setTheme] = useState("light");
+  const eventHandler = (themes) => {
+    const newTheme = themes === "dark" ? "dark" : "light";
+    setTheme(newTheme);
+  };
   return (
-    <div className="mainBg">
+    <main className={theme}>
       <TopBg />
-      <Header />
+      <Header onevent={eventHandler} />
       <SocialContents />
       <Head />
       <Overview />
-    </div>
+    </main>
   );
 }
 

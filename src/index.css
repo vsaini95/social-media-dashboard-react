@@ -30,5 +30,7 @@ body {
   --mainBg: hsl(230, 17%, 14%);
 }
 main {
-  background-color: var(--bg);
+  background-color: var(--mainbg);
+  height: 100vh;
+  overflow: hidden;
 }

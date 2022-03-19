@@ -2,12 +2,6 @@ import React from "react";
 import "./header.css";
 
 const headerContent = (props) => {
-  const body = document.querySelector("body");
-  body.classList.add("light");
-  const eventHandler = () => {
-    body.classList.toggle("light");
-    body.classList.toggle("dark");
-  };
   return (
     <div className="headerDiv">
       <div>
@@ -20,7 +14,7 @@ const headerContent = (props) => {
           type="checkbox"
           id="switch"
           class="checkbox"
-          onClick={eventHandler}
+          onClick={props.onevent("light")}
         />
         <label htmlFor="switch" class="toggle"></label>
       </div>
