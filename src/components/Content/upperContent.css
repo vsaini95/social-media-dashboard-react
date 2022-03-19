@@ -1,6 +1,6 @@
 .row {
   display: flex;
-  margin: 1.5rem 5% 0;
+  margin: 2.5rem 5% 0;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -9,7 +9,7 @@
   margin-top: 20px;
 }
 .box1 {
-  background-color: hsl(227, 47%, 96%);
+  background-color: var(--bgbox);
   width: calc(24% - 10px);
   display: flex;
   align-items: center;
@@ -17,7 +17,28 @@
   height: auto;
   border-radius: 8px;
   padding: 20px 0;
-  box-shadow: 0 0 3px 0px rgb(241, 241, 241);
+  box-shadow: 0 0 3px 0px var(--shadow);
+  position: relative;
+}
+.border {
+  width: 100%;
+  height: 5px;
+  border-radius: 8px 8px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.red {
+  background-color: hsl(348, 97%, 39%);
+}
+.blue1 {
+  background-color: hsl(208, 92%, 53%);
+}
+.blue2 {
+  background-color: hsl(203, 89%, 53%);
+}
+.gradient {
+  background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
 }
 .icon {
   margin-right: 10px;
@@ -28,19 +49,19 @@
   margin-top: 8px;
 }
 .name {
-  color: hsl(228, 12%, 44%);
+  color: var(--cardText);
   font-size: 0.8rem;
   font-weight: 600;
 }
 .count {
-  color: hsl(230, 17%, 14%);
+  color: var(--count);
   margin: 20px 0 0;
   font-size: 3rem;
 }
 .type {
   text-transform: uppercase;
   letter-spacing: 0.4rem;
-  color: hsl(228, 12%, 44%);
+  color: var(--cardText);
   font-size: 0.7rem;
   font-weight: 500;
 }
@@ -55,8 +76,18 @@
   font-weight: 600;
 }
 .box1:hover {
-  background-color: hsl(227, 47%, 94%);
+  background-color: var(--hover);
 }
 
 @media screen and (max-width: 769px) {
+  .box1 {
+    width: calc(50% - 10px);
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 426px) {
+  .box1 {
+    width: calc(100% - 10px);
+    margin-bottom: 1rem;
+  }
 }

@@ -1,6 +1,5 @@
 .row2 {
   display: flex;
-  margin: 1.5rem 5% 0;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -9,16 +8,19 @@
   justify-content: space-between;
 }
 .box2 {
-  background-color: hsl(227, 47%, 96%);
+  background-color: var(--bgbox);
   width: calc(21% - 10px);
   height: auto;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 0 3px 0px rgb(241, 241, 241);
+  box-shadow: 0 0 3px 0px var(--shadow);
   margin-bottom: 2rem;
 }
+.views {
+  color: var(--views);
+}
 .name2 {
-  color: hsl(228, 12%, 44%);
+  color: var(--cardText);
   font-size: 1rem;
   font-weight: 700;
 }
@@ -41,5 +43,20 @@
   font-weight: 600;
 }
 .box2:hover {
-  background-color: hsl(227, 47%, 94%);
+  background-color: var(--hover);
+}
+.cardsDiv {
+  margin: 1.5rem 5% 0;
+}
+@media screen and (max-width: 769px) {
+  .box2 {
+    width: calc(44% - 10px);
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 426px) {
+  .box2 {
+    width: calc(100% - 10px);
+    margin-bottom: 1rem;
+  }
 }

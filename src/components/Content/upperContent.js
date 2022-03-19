@@ -9,6 +9,7 @@ const CardDetails = [
     type: "followers",
     vIcon: "up",
     vote: "12",
+    UpperBorder: "blue1",
   },
   {
     image: "images/icon-twitter.svg",
@@ -17,6 +18,7 @@ const CardDetails = [
     type: "followers",
     vIcon: "up",
     vote: "99",
+    UpperBorder: "blue2",
   },
   {
     image: "images/icon-instagram.svg",
@@ -25,6 +27,7 @@ const CardDetails = [
     type: "followers",
     vIcon: "up",
     vote: "1099",
+    UpperBorder: "gradient",
   },
   {
     image: "images/icon-youtube.svg",
@@ -33,12 +36,14 @@ const CardDetails = [
     type: "subscribers",
     vIcon: "down",
     vote: "144",
+    UpperBorder: "red",
   },
 ];
 function SocialContent() {
   let SocialCards = CardDetails.map((element, i) => {
     return (
       <div className="box1">
+        <div class={`border ${element.UpperBorder}`}></div>
         <div className="flex">
           <img className="icon" src={element.image} />
           <div className="name">{element.name}</div>

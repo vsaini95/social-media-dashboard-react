@@ -1,4 +1,4 @@
 .color {
-  color: hsl(228, 12%, 44%);
+  color: var(--ocolor);
   margin: 25px 5% 0;
 }

@@ -4,9 +4,54 @@
 .headerDiv {
   margin: 30px 5%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
+.h1 {
+  color: var(--hcolor);
+}
 .totalF {
-  color: hsl(228, 12%, 44%);
+  color: var(--cardText);
   font-weight: 600;
+}
+.darkMode {
+  font-weight: 600;
+  color: var(--color);
+  margin: 5px 10px 0 0;
+}
+.checkbox {
+  display: none;
+}
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  border-radius: 30px;
+}
+.toggle:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 30px;
+  background-color: #fff;
+  top: 3px;
+  right: 5px;
+  transition: all 0.5s;
+}
+.checkbox:checked + .toggle::after {
+  right: 30px;
+}
+.checkbox:checked + .toggle::after {
+  background-color: hsl(230, 17%, 14%);
+}
+@media screen and (max-width: 426px) {
+  .h1 {
+    font-size: 1.7rem;
+  }
+  .totalF {
+    font-size: 1rem;
+  }
 }

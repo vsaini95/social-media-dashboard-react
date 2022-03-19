@@ -1,5 +1,5 @@
 .top {
-  background-color: hsl(225, 100%, 98%);
+  background-color: var(--bg);
   height: 230px;
   border-radius: 0 0 30px 30px;
   position: absolute;

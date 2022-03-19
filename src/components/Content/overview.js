@@ -30,6 +30,26 @@ const oDetails = [
     vTcon: "up",
     vote: "1375%",
   },
+];
+let Cards1 = oDetails.map((elem, i) => {
+  return (
+    <div className="box2">
+      <div className="flex2">
+        <div className="name2">{elem.content}</div>
+        <img className="icon2" src={elem.Icon} />
+      </div>
+      <div className="flex2 line2">
+        <h1 className="views">{elem.contentNo}</h1>
+        <div className="flex2 line2">
+          <img className="iconvote2" src={`images/icon-${elem.vTcon}.svg`} />
+          <p className={`${elem.vTcon}2`}>{elem.vote}</p>
+        </div>
+      </div>
+    </div>
+  );
+});
+
+const oDetails2 = [
   {
     content: "Retweets",
     Icon: "images/icon-twitter.svg",
@@ -59,25 +79,30 @@ const oDetails = [
     vote: "12%",
   },
 ];
-function overviewContent() {
-  let Cards = oDetails.map((elem, i) => {
-    return (
-      <div className="box2">
-        <div className="flex2">
-          <div className="name2">{elem.content}</div>
-          <img className="icon2" src={elem.Icon} />
-        </div>
+
+let Cards2 = oDetails2.map((elem, i) => {
+  return (
+    <div className="box2">
+      <div className="flex2">
+        <div className="name2">{elem.content}</div>
+        <img className="icon2" src={elem.Icon} />
+      </div>
+      <div className="flex2 line2">
+        <h1 className="views">{elem.contentNo}</h1>
         <div className="flex2 line2">
-          <h1>{elem.contentNo}</h1>
-          <div className="flex2 line2">
-            <img className="iconvote2" src={`images/icon-${elem.vTcon}.svg`} />
-            <p className={`${elem.vTcon}2`}>{elem.vote}</p>
-          </div>
+          <img className="iconvote2" src={`images/icon-${elem.vTcon}.svg`} />
+          <p className={`${elem.vTcon}2`}>{elem.vote}</p>
         </div>
       </div>
-    );
-  });
-  return <div className="row2">{Cards}</div>;
+    </div>
+  );
+});
+function overviewContent() {
+  return (
+    <div className="cardsDiv">
+      <div className="row2">{Cards1}</div>
+      <div className="row2">{Cards2}</div>
+    </div>
+  );
 }
-
 export default overviewContent;
